@@ -84,9 +84,29 @@ while capture.isOpened():
             cv2.line(crop_image, start, end, [0, 255, 0], 2)
 
         # Press SPACE if condition is match
+
         if count_defects >= 4:
-            pyautogui.press('space')
-            cv2.putText(frame, "JUMP", (115, 80), cv2.FONT_HERSHEY_SIMPLEX, 2, 2, 2)
+                pyautogui.press('space')
+                cv2.putText(frame, "JUMP", (115, 80), cv2.FONT_HERSHEY_SIMPLEX, 2, 2, 2)
+
+        #PLAY RACING GAMES (WASD)
+        """
+        if count_defects == 1:
+            pyautogui.press('w')
+            cv2.putText(frame, "W", (115, 80), cv2.FONT_HERSHEY_SIMPLEX, 2, 2, 2)
+        if count_defects == 2:
+            pyautogui.press('s')
+            cv2.putText(frame, "S", (115, 80), cv2.FONT_HERSHEY_SIMPLEX, 2, 2, 2)
+        if count_defects == 3:
+            pyautogui.press('aw')
+            cv2.putText(frame, "aw", (115, 80), cv2.FONT_HERSHEY_SIMPLEX, 2, 2, 2)
+        if count_defects == 4:
+            pyautogui.press('dw')
+            cv2.putText(frame, "dw", (115, 80), cv2.FONT_HERSHEY_SIMPLEX, 2, 2, 2)
+        if count_defects == 5:
+            pyautogui.press('s')
+            cv2.putText(frame, "s", (115, 80), cv2.FONT_HERSHEY_SIMPLEX, 2, 2, 2)
+        """
 
     except:
         pass
